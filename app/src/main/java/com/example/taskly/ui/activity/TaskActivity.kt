@@ -9,6 +9,7 @@ import com.example.taskly.model.Task
 
 class TaskActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTaskBinding
+    private var taskId = 0L
     private val taskDao by lazy {
         AppDatabase.instance(this).taskDao()
     }
@@ -19,6 +20,18 @@ class TaskActivity : AppCompatActivity() {
         setContentView(binding.root)
         title = "Register Task"
         confSaveButton()
+        tryToLoadTask()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        taskDao.getById(taskId)?.let {
+            fillFields(it)
+        }
+    }
+
+    private fun tryToLoadTask() {
+        taskId = intent.getLongExtra(TASK_KEY_ID, 0L)
     }
 
     private fun confSaveButton() {
@@ -40,8 +53,18 @@ class TaskActivity : AppCompatActivity() {
         }
 
         return Task(
+            id = taskId,
             title = title,
-            description = description
+            description = description,
+            isCompleted = false
         )
+    }
+
+    private fun fillFields(task: Task) {
+        title = "Edit Task"
+        with(binding) {
+            tieTitleTask.setText(task.title)
+            tieDescriptionTask.setText(task.description)
+        }
     }
 }
