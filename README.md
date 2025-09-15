@@ -21,7 +21,7 @@ Key concepts covered:
 - MVP architecture implementation
 - UX improvements with Material Design
 
-> **Note:** This is a Minimum Viable Product (MVP). Features like task editing, deletion, completion status, priorities, and due dates will be implemented in future versions.
+> **Note:** This is a Minimum Viable Product (MVP). Features like priorities and due dates will be implemented in future versions.
 
 ## 🚀 Technologies
 
@@ -58,15 +58,16 @@ git clone https://github.com/math-nazario/taskly.git
 3. Build and run the app on an emulator or physical device
 4. Add tasks using the "+" button
 
-## 📝 Next Steps
+## 📝 Roadmap
 
-**High Priority**
-- Edit and delete tasks
-- Mark tasks as completed
+### High Priority ✅ Done
+- Edit and delete tasks  
+- Mark tasks as completed  
 
-**Medium Priority**
-- Add due dates and priorities
+### Medium Priority ⏳ Next
+- Add due dates  
+- Add priorities  
 
-**Low Priority**
-- Task cards with icons and better styling
+### Low Priority 📌 Future
+- Task cards with icons and better styling  
 - Animations and improved Material components
