@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -9,8 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="?attr/actionBarSize"
-        tools:context=".ui.activity.ProductActivity">
+        android:paddingTop="?attr/actionBarSize">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilTitleTask"
@@ -26,7 +24,7 @@
                 android:id="@+id/tieTitleTask"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Title"
+                android:hint="@string/hint_title"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,21 +42,43 @@
                 android:id="@+id/tieDescriptionTask"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Description"
+                android:hint="@string/hint_description"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <EditText
+            android:id="@+id/edtDueDateTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:drawableEnd="@android:drawable/ic_menu_today"
+            android:focusable="false"
+            android:hint="@string/hint_due_date"
+            android:inputType="none"
+            app:layout_constraintStart_toStartOf="@+id/tilTitleTask"
+            app:layout_constraintTop_toBottomOf="@+id/tilDescriptionTask" />
+
+        <Spinner
+            android:id="@+id/spnPriorityTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:entries="@array/priorities"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="@+id/tilTitleTask"
+            app:layout_constraintTop_toBottomOf="@+id/edtDueDateTask" />
 
         <Button
             android:id="@+id/btnSaveTask"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Save"
+            android:text="@string/btn_save"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilDescriptionTask"
+            app:layout_constraintTop_toBottomOf="@+id/spnPriorityTask"
             app:layout_constraintVertical_bias="1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

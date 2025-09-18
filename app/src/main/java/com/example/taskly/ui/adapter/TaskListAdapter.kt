@@ -2,14 +2,17 @@ package com.example.taskly.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskly.databinding.TaskItemBinding
+import com.example.taskly.util.Priority
 import com.example.taskly.model.Task
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class TaskListAdapter(
-
-
     private val context: Context,
     tasks: List<Task> = emptyList(),
     var clickItem: (task: Task) -> Unit = {},
@@ -50,6 +53,34 @@ class TaskListAdapter(
             binding.cbCompletedTask.setOnCheckedChangeListener { _, isChecked ->
                 onCheckChanged(task, isChecked)
             }
+
+            if (task.dueDate != null) {
+                val formattedDate =
+                    SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(task.dueDate)
+                binding.txtDueDateTask.text = "$formattedDate"
+                binding.txtDueDateTask.visibility = View.VISIBLE
+            } else {
+                binding.txtDueDateTask.visibility = View.GONE
+            }
+
+            binding.vwPriorityIndicator.setBackgroundColor(
+                when (task.priority) {
+                    Priority.LOW -> ContextCompat.getColor(
+                        context,
+                        android.R.color.holo_green_dark
+                    )
+
+                    Priority.MEDIUM -> ContextCompat.getColor(
+                        context,
+                        android.R.color.holo_orange_dark
+                    )
+
+                    Priority.HIGH -> ContextCompat.getColor(
+                        context,
+                        android.R.color.holo_red_dark
+                    )
+                }
+            )
         }
     }
 

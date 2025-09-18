@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Taskly</string>
+
+    <!-- Titles -->
+    <string name="title_register_task">Register Task</string>
+    <string name="title_edit_task">Edit Task</string>
+    <string name="title_delete_task">Delete Task</string>
+
+    <!-- Messages -->
+    <string name="msg_title_required">Title is required</string>
+    <string name="msg_fill_all_fields">Fill all fields</string>
+    <string name="msg_delete_confirmation">Are you sure you want to delete</string>
+    <string name="msg_task_deleted">Task deleted</string>
+    <string name="msg_task_completed_not_editable">Completed tasks cannot be edited</string>
+
+    <!-- Buttons -->
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="btn_save">Save</string>
+
+    <!-- Fields -->
+    <string name="hint_title">Title</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_due_date">Due date</string>
+
+    <!-- Priorities -->
+    <string-array name="priorities">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
 </resources>

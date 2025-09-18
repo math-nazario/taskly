@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.taskly.R
 import com.example.taskly.database.AppDatabase
 import com.example.taskly.databinding.ActivityTaskListBinding
 import com.example.taskly.model.Task
@@ -40,7 +41,11 @@ class TaskListActivity : AppCompatActivity() {
         binding.rvTasks.adapter = adapter
         adapter.clickItem = { task ->
             if (task.isCompleted) {
-                Toast.makeText(this, "Completed tasks cannot be edited", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    getString(R.string.msg_task_completed_not_editable),
+                    Toast.LENGTH_SHORT
+                ).show()
             } else {
                 val intent = Intent(this, TaskActivity::class.java).apply {
                     putExtra(TASK_KEY_ID, task.id)
@@ -66,14 +71,15 @@ class TaskListActivity : AppCompatActivity() {
 
     private fun confirmDelete(task: Task) {
         AlertDialog.Builder(this)
-            .setTitle("Delete Task")
-            .setMessage("Are you sure you want to delete \"${task.title}\"?")
-            .setPositiveButton("Yes") { _, _ ->
+            .setTitle(getString(R.string.title_delete_task))
+            .setMessage(getString(R.string.msg_delete_confirmation) + " \"${task.title}\"?")
+            .setPositiveButton(getString(R.string.btn_yes)) { _, _ ->
                 taskDao.delete(task)
                 adapter.update(taskDao.getAll())
-                Toast.makeText(this, "Task deleted", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.msg_task_deleted), Toast.LENGTH_SHORT)
+                    .show()
             }
-            .setNegativeButton("No", null)
+            .setNegativeButton(getString(R.string.btn_no), null)
             .show()
     }
 }

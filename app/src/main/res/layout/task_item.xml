@@ -12,12 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <View
+            android:id="@+id/vwPriorityIndicator"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <CheckBox
             android:id="@+id/cbCompletedTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vwPriorityIndicator"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -39,15 +48,30 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/txtTitleTask"
             app:layout_constraintStart_toStartOf="@+id/txtTitleTask"
             app:layout_constraintTop_toBottomOf="@+id/txtTitleTask"
             tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/txtDueDateTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtDescriptionTask"
+            app:layout_constraintStart_toStartOf="@+id/txtDescriptionTask"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescriptionTask"
+            tools:text="Due Date: 15/09/2025" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

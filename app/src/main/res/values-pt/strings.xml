@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Taskly</string>
+
+    <!-- Titles -->
+    <string name="title_register_task">Cadastrar Tarefa</string>
+    <string name="title_edit_task">Editar Tarefa</string>
+    <string name="title_delete_task">Excluir Tarefa</string>
+
+    <!-- Messages -->
+    <string name="msg_title_required">O título é obrigatório</string>
+    <string name="msg_fill_all_fields">Preencha todos os campos</string>
+    <string name="msg_delete_confirmation">Tem certeza que deseja excluir</string>
+    <string name="msg_task_deleted">Tarefa excluída</string>
+    <string name="msg_task_completed_not_editable">Tarefas concluídas não podem ser editadas</string>
+
+    <!-- Buttons -->
+    <string name="btn_yes">Sim</string>
+    <string name="btn_no">Não</string>
+    <string name="btn_save">Salvar</string>
+
+    <!-- Fields -->
+    <string name="hint_title">Título</string>
+    <string name="hint_description">Descrição</string>
+    <string name="hint_due_date">Data de vencimento</string>
+
+    <!-- Priorities -->
+    <string-array name="priorities">
+        <item>Baixa</item>
+        <item>Média</item>
+        <item>Alta</item>
+    </string-array>
+</resources>
