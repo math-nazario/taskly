@@ -1,5 +1,5 @@
 # Taskly
-![Version](https://img.shields.io/badge/version-v1.0.0-green)
+![Version](https://img.shields.io/badge/version-v1.1.0-green)
 
 > Taskly is a simple and intuitive To-Do application built with Kotlin and Android. This MVP project demonstrates core Android development concepts and Room persistence, while applying Material Design for a modern UX.
 
@@ -64,10 +64,10 @@ git clone https://github.com/math-nazario/taskly.git
 - Edit and delete tasks  
 - Mark tasks as completed  
 
-### Medium Priority ⏳ Next
+### Medium Priority ✅ Done
 - Add due dates  
 - Add priorities  
 
-### Low Priority 📌 Future
+### Low Priority ⏳ Next
 - Task cards with icons and better styling  
 - Animations and improved Material components
