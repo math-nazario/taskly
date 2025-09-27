@@ -1,4 +1,5 @@
 <resources>
+    <!-- App -->
     <string name="app_name">Taskly</string>
 
     <!-- Titles -->
@@ -12,13 +13,23 @@
     <string name="msg_delete_confirmation">Tem certeza que deseja excluir</string>
     <string name="msg_task_deleted">Tarefa excluída</string>
     <string name="msg_task_completed_not_editable">Tarefas concluídas não podem ser editadas</string>
+    <string name="msg_empty_list">Nenhuma tarefa por aqui...</string>
 
     <!-- Buttons -->
     <string name="btn_yes">Sim</string>
     <string name="btn_no">Não</string>
     <string name="btn_save">Salvar</string>
+    <string name="btn_undo">Desfazer</string>
 
-    <!-- Fields -->
+    <!-- Content descriptions (a11y) -->
+    <string name="cd_edit_task">Editar tarefa</string>
+    <string name="cd_delete_task">Excluir tarefa</string>
+    <string name="cd_add_task">Adicionar tarefa</string>
+    <string name="cd_mark_completed">Marcar como concluída</string>
+    <string name="cd_more_options">Mais opções</string>
+    <string name="cd_empty_state">Vazio</string>
+
+    <!-- Hints -->
     <string name="hint_title">Título</string>
     <string name="hint_description">Descrição</string>
     <string name="hint_due_date">Data de vencimento</string>
@@ -29,4 +40,16 @@
         <item>Média</item>
         <item>Alta</item>
     </string-array>
+
+    <string name="priority_low">Baixa</string>
+    <string name="priority_medium">Média</string>
+    <string name="priority_high">Alta</string>
+
+    <!-- Filters / Sorting -->
+    <string name="sort">Organizar</string>
+    <string name="sort_date">Classificar por data</string>
+    <string name="sort_priority">Classificar por prioridade</string>
+    <string name="show_all">Mostrar tudo</string>
+    <string name="pending_only">Somente pendente</string>
+    <string name="completed_only">Somente concluído</string>
 </resources>

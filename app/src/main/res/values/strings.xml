@@ -1,4 +1,5 @@
 <resources>
+    <!-- App -->
     <string name="app_name">Taskly</string>
 
     <!-- Titles -->
@@ -12,13 +13,23 @@
     <string name="msg_delete_confirmation">Are you sure you want to delete</string>
     <string name="msg_task_deleted">Task deleted</string>
     <string name="msg_task_completed_not_editable">Completed tasks cannot be edited</string>
+    <string name="msg_empty_list">No tasks here...</string>
 
     <!-- Buttons -->
     <string name="btn_yes">Yes</string>
     <string name="btn_no">No</string>
     <string name="btn_save">Save</string>
+    <string name="btn_undo">Undo</string>
 
-    <!-- Fields -->
+    <!-- Content descriptions (a11y) -->
+    <string name="cd_edit_task">Edit Task</string>
+    <string name="cd_delete_task">Delete Task</string>
+    <string name="cd_add_task">Register Task</string>
+    <string name="cd_mark_completed">Mark as completed</string>
+    <string name="cd_more_options">More options</string>
+    <string name="cd_empty_state">Empty</string>
+
+    <!-- Hints -->
     <string name="hint_title">Title</string>
     <string name="hint_description">Description</string>
     <string name="hint_due_date">Due date</string>
@@ -29,4 +40,16 @@
         <item>Medium</item>
         <item>High</item>
     </string-array>
+
+    <string name="priority_low">Low</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_high">High</string>
+
+    <!-- Filters / Sorting -->
+    <string name="sort">Sort</string>
+    <string name="sort_date">Sort by Date</string>
+    <string name="sort_priority">Sort by Priority</string>
+    <string name="show_all">Show All</string>
+    <string name="pending_only">Pending Only</string>
+    <string name="completed_only">Completed Only</string>
 </resources>

@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:contentPadding="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,17 +16,19 @@
 
         <View
             android:id="@+id/vwPriorityIndicator"
-            android:layout_width="8dp"
+            android:layout_width="6dp"
             android:layout_height="0dp"
-            android:background="@android:color/holo_red_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@android:color/holo_orange_dark" />
 
         <CheckBox
             android:id="@+id/cbCompletedTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/cd_mark_completed"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/vwPriorityIndicator"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,12 +37,13 @@
             android:id="@+id/txtTitleTask"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnMoreOptions"
             app:layout_constraintStart_toEndOf="@+id/cbCompletedTask"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/lorem/random" />
@@ -47,9 +52,10 @@
             android:id="@+id/txtDescriptionTask"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="6dp"
             android:ellipsize="end"
             android:maxLines="1"
+            android:textColor="?android:attr/textColorSecondary"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/txtTitleTask"
             app:layout_constraintStart_toStartOf="@+id/txtTitleTask"
@@ -60,18 +66,46 @@
             android:id="@+id/txtDueDateTask"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/txtDescriptionTask"
             app:layout_constraintStart_toStartOf="@+id/txtDescriptionTask"
             app:layout_constraintTop_toBottomOf="@+id/txtDescriptionTask"
-            tools:text="Due Date: 15/09/2025" />
+            app:layout_constraintWidth_percent="0.4"
+            tools:text="00/00/0000" />
+
+        <TextView
+            android:id="@+id/txtPriorityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/txtDueDateTask"
+            app:layout_constraintEnd_toEndOf="@+id/txtDescriptionTask"
+            app:layout_constraintStart_toEndOf="@id/txtDueDateTask"
+            tools:text="Medium" />
+
+        <ImageButton
+            android:id="@+id/btnMoreOptions"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_more_options"
+            android:padding="8dp"
+            android:src="@drawable/ic_action_more_vert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/colorPrimary" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

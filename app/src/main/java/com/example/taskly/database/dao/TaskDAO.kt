@@ -24,4 +24,16 @@ interface TaskDAO {
 
     @Query("SELECT * FROM task WHERE id = :id")
     fun getById(id: Long): Task?
+
+    @Query("SELECT * FROM task WHERE isCompleted = 0")
+    fun getPending(): List<Task>
+
+    @Query("SELECT * FROM task WHERE isCompleted = 1")
+    fun getCompleted(): List<Task>
+
+    @Query("SELECT * FROM task ORDER BY dueDate ASC")
+    fun sortByDate(): List<Task>
+
+    @Query("SELECT * FROM task ORDER BY priority ASC")
+    fun sortByPriority(): List<Task>
 }

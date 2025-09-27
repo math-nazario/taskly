@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mnOrderingProduct"
+        android:icon="@drawable/ic_action_sort"
+        android:title="@string/sort"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@+id/mnSortDate"
+                android:title="@string/sort_date" />
+
+            <item
+                android:id="@+id/mnSortPriority"
+                android:title="@string/sort_priority" />
+
+            <item
+                android:id="@+id/mnFilterAll"
+                android:title="@string/show_all" />
+
+            <item
+                android:id="@+id/mnFilterPending"
+                android:title="@string/pending_only" />
+
+            <item
+                android:id="@+id/mnFilterCompleted"
+                android:title="@string/completed_only" />
+        </menu>
+    </item>
+</menu>

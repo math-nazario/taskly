@@ -5,12 +5,12 @@ import com.example.taskly.util.Priority
 
 class Converters {
     @TypeConverter
-    fun fromPriority(priority: Priority): String {
-        return priority.name
+    fun fromPriority(priority: Priority): Int {
+        return priority.ordinal
     }
 
     @TypeConverter
-    fun toPriority(value: String): Priority {
-        return Priority.valueOf(value)
+    fun toPriority(value: Int): Priority {
+        return Priority.entries[value]
     }
 }
