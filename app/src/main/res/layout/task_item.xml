@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:minHeight="72dp">
 
         <View
             android:id="@+id/vwPriorityIndicator"
@@ -30,7 +31,7 @@
             android:layout_marginStart="8dp"
             android:contentDescription="@string/cd_mark_completed"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/vwPriorityIndicator"
+            app:layout_constraintStart_toEndOf="@id/vwPriorityIndicator"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -43,8 +44,8 @@
             android:maxLines="1"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/btnMoreOptions"
-            app:layout_constraintStart_toEndOf="@+id/cbCompletedTask"
+            app:layout_constraintEnd_toStartOf="@id/btnMoreOptions"
+            app:layout_constraintStart_toEndOf="@id/cbCompletedTask"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/lorem/random" />
 
@@ -52,21 +53,34 @@
             android:id="@+id/txtDescriptionTask"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="4dp"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/txtTitleTask"
-            app:layout_constraintStart_toStartOf="@+id/txtTitleTask"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitleTask"
+            app:layout_constraintEnd_toEndOf="@id/txtTitleTask"
+            app:layout_constraintStart_toStartOf="@id/txtTitleTask"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleTask"
             tools:text="@tools:sample/lorem/random" />
 
         <TextView
             android:id="@+id/txtDueDateTask"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/txtDescriptionTask"
+            app:layout_constraintTop_toBottomOf="@id/txtDescriptionTask"
+            tools:text="00/00/0000" />
+
+        <TextView
+            android:id="@+id/txtPriorityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:ellipsize="end"
             android:maxLines="1"
@@ -74,24 +88,8 @@
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/txtDescriptionTask"
-            app:layout_constraintTop_toBottomOf="@+id/txtDescriptionTask"
-            app:layout_constraintWidth_percent="0.4"
-            tools:text="00/00/0000" />
-
-        <TextView
-            android:id="@+id/txtPriorityLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@id/txtDueDateTask"
-            app:layout_constraintEnd_toEndOf="@+id/txtDescriptionTask"
-            app:layout_constraintStart_toEndOf="@id/txtDueDateTask"
+            app:layout_constraintEnd_toStartOf="@id/btnMoreOptions"
+            app:layout_constraintTop_toBottomOf="@id/txtDescriptionTask"
             tools:text="Medium" />
 
         <ImageButton
