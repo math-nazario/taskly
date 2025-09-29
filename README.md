@@ -1,58 +1,90 @@
 # Taskly
-![Version](https://img.shields.io/badge/version-v1.2.0-green)
+![Version](https://img.shields.io/badge/version-v1.1.0-green)
 
-> Taskly is a simple and intuitive To-Do application built with Kotlin and Android. This MVP project demonstrates core Android development concepts and Room persistence, while applying Material Design for a modern UX.
+> Taskly is a simple and intuitive To-Do application built with Kotlin and Android.  
+> This MVP project demonstrates core Android development concepts and Room persistence,  
+> while applying Material Design for a modern UX.  
+> Although it started as an MVP, it already includes useful features such as priorities,  
+> due dates, task filtering, and sorting.
+
+---
 
 ## 💡 Overview
 
-Taskly helps users organize their daily tasks efficiently, providing a clean and modern interface to **create, edit, view, and persist tasks locally**.  
-The project was developed to consolidate knowledge in Android fundamentals, Room database, and UI/UX design with Material Components.
+Taskly helps users organize their daily tasks efficiently, providing a simple interface to **create, view, and persist tasks locally**.  
+This educational project was developed to consolidate knowledge in Android fundamentals, Room database, and Material Design.
 
 Key concepts covered:
 
-- Android project structure and Activity lifecycle  
-- Layout creation using XML + ConstraintLayout  
-- UI components: `TextView`, `EditText`, `Spinner`, `Button`, `FloatingActionButton`  
-- List rendering with `RecyclerView`, custom `Adapter`, and **DiffUtil** for efficient updates  
-- ViewBinding for safer access to views  
-- Local persistence with **Room Database** (DAO, entities, queries)  
-- MVP architecture for maintainable code  
-- Material Design theming and components  
+- Basic structure of an Android project
+- Usage of `Activity` and lifecycle methods
+- Layout creation using XML
+- UI components: `TextView`, `EditText`, `Button`, `FloatingActionButton`
+- List rendering with `RecyclerView` and custom `Adapter`
+- ViewBinding for safer access to views
+- Navigation between screens
+- Local data persistence using **Room Database** (DAO, entities, queries)
+- MVP architecture implementation
+- UX improvements with Material Design
+
+> **Note:** This is still treated as a **Minimum Viable Product (MVP)**.  
+> Features like reminders, notifications, and cloud sync will be explored in future versions.
+
+---
 
 ## 🚀 Technologies
 
-- Kotlin  
-- Android Studio  
-- Android SDK / AndroidX  
-- ViewBinding  
-- RecyclerView + DiffUtil  
-- Material Components  
-- Room (SQLite abstraction library)   
+- Kotlin
+- Android Studio
+- Android SDK / AndroidX
+- ViewBinding
+- RecyclerView
+- Material Components
+- Room (SQLite abstraction library)
+
+---
 
 ## ✅ Features
 
-**Task Management**  
-- Create tasks with **title** (required) and **description** (optional)  
-- Set **priority levels** (Low, Medium, High)  
-- Add an optional **due date**  
-- Edit and delete tasks  
-- Mark tasks as completed  
-- Tasks stored locally with Room database  
+**Task Management**
+- Create tasks with title and description
+- Edit and delete tasks
+- Mark tasks as completed
+- Local persistence using Room database (DAO, Entity, Database)
 
-**UX & UI**  
-- Material Design components (theming, typography, icons)  
-- Modern and responsive layouts using ConstraintLayout  
-- FloatingActionButton for quick task creation  
-- Priority indicator with color coding  
-- Dark Mode support (native Android theme)  
+**Enhancements**
+- Add due dates
+- Set priorities (Low, Medium, High)
+- Sort and filter tasks
 
-**Architecture & Code Quality**  
-- MVP pattern for separation of concerns  
-- DiffUtil for efficient RecyclerView updates  
-- ViewBinding for type-safe view access  
-- Improved validation and date persistence  
+**UX & UI**
+- Material Design components
+- FloatingActionButton for quick task creation
+- Responsive layouts using ConstraintLayout
+- Light & Dark mode support
 
-## 🚀 How to Run
+**Architecture & Code Quality**
+- MVP pattern for maintainable code
+- ViewBinding for safer view access
+
+---
+
+## 📸 Screenshots & Demo
+
+| Home (Empty)               | Home (Populated)                      |
+|----------------------------|---------------------------------------|
+| ![Empty](docs/home_empty.png) | ![Populated](docs/home_populated.png) |
+
+| Edit Task                   | Dark Mode                   |
+|-----------------------------|-----------------------------|
+| ![Edit](docs/edit_task.png) | ![Dark](docs/home_dark.png) |
+
+**App Flow (GIF Demo)**  
+![Demo](docs/demo.gif)
+
+---
+
+## ▶️ How to Run
 1. Clone the repository:
 ```
 git clone https://github.com/math-nazario/taskly.git
@@ -75,3 +107,10 @@ git clone https://github.com/math-nazario/taskly.git
 - Cloud sync with API backend
 - Notifications and reminders
 - Search and filtering improvements
+
+---
+
+## 📌 Status
+
+This project is an **MVP with incremental improvements**.
+It already covers core Android concepts while adding practical features, but still has room for evolution.
