@@ -71,16 +71,12 @@ Key concepts covered:
 
 ## 📸 Screenshots & Demo
 
-| Home (Empty)               | Home (Populated)                      |
-|----------------------------|---------------------------------------|
-| ![Empty](docs/home_empty.png) | ![Populated](docs/home_populated.png) |
-
-| Edit Task                   | Dark Mode                   |
-|-----------------------------|-----------------------------|
-| ![Edit](docs/edit_task.png) | ![Dark](docs/home_dark.png) |
+| Home (Empty)                                   | Home (Populated)                                | Edit Task                                   | Dark Mode                                |
+|-----------------------------------------------|------------------------------------------------|-----------------------------------------------|------------------------------------------------|
+| <img src="docs/home_empty.png" width="200"/>  | <img src="docs/home_populated.png" width="200"/> | <img src="docs/edit_task.png" width="200"/>   | <img src="docs/home_dark.png" width="200"/>   |
 
 **App Flow (GIF Demo)**  
-![Demo](docs/demo.gif)
+<img src="docs/demo.gif" width="250"/>
 
 ---
 
@@ -92,6 +88,8 @@ git clone https://github.com/math-nazario/taskly.git
 2. Open the project in **Android Studio**
 3. Build and run the app on an emulator or physical device
 4. Add tasks using the "+" button
+
+---
 
 ## 📝 Roadmap
 
