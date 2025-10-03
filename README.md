@@ -69,14 +69,22 @@ Key concepts covered:
 
 ---
 
-## 📸 Screenshots & Demo
+## 📸 Demo
 
-| Home (Empty)                                   | Home (Populated)                                | Edit Task                                   | Dark Mode                                |
-|-----------------------------------------------|------------------------------------------------|-----------------------------------------------|------------------------------------------------|
-| <img src="docs/home_empty.png" width="200"/>  | <img src="docs/home_populated.png" width="200"/> | <img src="docs/edit_task.png" width="200"/>   | <img src="docs/home_dark.png" width="200"/>   |
+<p align="center">
+  <img src="docs/demo.gif" width="320"/>
+</p>
 
-**App Flow (GIF Demo)**  
-<img src="docs/demo.gif" width="250"/>
+---
+
+## 📷 Screenshots
+
+<p align="center">
+  <img src="docs/home_empty.png" width="200"/>
+  <img src="docs/home_populated.png" width="200"/>
+  <img src="docs/edit_task.png" width="200"/>
+  <img src="docs/home_dark.png" width="200"/>
+</p>
 
 ---
 
